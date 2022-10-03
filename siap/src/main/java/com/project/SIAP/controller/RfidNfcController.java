@@ -1,5 +1,6 @@
 package com.project.SIAP.controller;
 
+import com.project.SIAP.entities.PersonalUniversidad;
 import com.project.SIAP.entities.RfidNfc;
 import com.project.SIAP.repository.RfidNfcRepository;
 import org.slf4j.Logger;

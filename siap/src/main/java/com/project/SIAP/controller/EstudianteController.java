@@ -62,7 +62,7 @@ public class EstudianteController {
             log.warn("Este usuario ya existe");;
             return ResponseEntity.badRequest().build();
         }
-        Estudiante result = estudianteRepository.saveAndFlush(estudiante);
+        Estudiante result = estudianteRepository.save(estudiante);
         return ResponseEntity.ok(result);
     }
 

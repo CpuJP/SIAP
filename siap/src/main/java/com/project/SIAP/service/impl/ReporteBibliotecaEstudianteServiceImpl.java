@@ -102,5 +102,25 @@ public class ReporteBibliotecaEstudianteServiceImpl implements ReporteJasperServ
 
 		return dto;
 	}
+
+
+	@Override
+	public ReporteJasperDTO obtenerReporteEgresadoCampus(Map<String, Object> params)
+			throws JRException, IOException, SQLException {
+		String fileName = "egresados_campus";
+		ReporteJasperDTO dto = new ReporteJasperDTO();
+		String extension = params.get("tipo").toString().equalsIgnoreCase(TipoReporteEnum.EXCEL.name()) ? ".xlsx"
+				: ".pdf";
+		dto.setFileName(fileName + extension);
+
+		ByteArrayOutputStream stream = reportManager.export(fileName, params.get("tipo").toString(), params,
+				dataSource.getConnection());
+
+		byte[] bs = stream.toByteArray();
+		dto.setStream(new ByteArrayInputStream(bs));
+		dto.setLength(bs.length);
+
+		return dto;
+	}
 }
 

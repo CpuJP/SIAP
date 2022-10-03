@@ -17,4 +17,7 @@ public interface ReporteJasperServiceAPI {
 
 	ReporteJasperDTO obtenerReporteDocenteCampus(Map<String, Object> params) throws JRException, IOException, SQLException;
 
+	ReporteJasperDTO obtenerReporteEgresadoCampus(Map<String, Object> params) throws JRException, IOException, SQLException;
+
+
 }

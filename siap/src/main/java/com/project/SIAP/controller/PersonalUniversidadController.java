@@ -1,6 +1,7 @@
 package com.project.SIAP.controller;
 
 import com.project.SIAP.entities.PersonalUniversidad;
+import com.project.SIAP.entities.RfidNfc;
 import com.project.SIAP.repository.PersonalUniversidadRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,6 +31,12 @@ public class PersonalUniversidadController {
     @GetMapping("/buscar/{id}")
     public ResponseEntity<PersonalUniversidad> findById(@PathVariable String id) {
         Optional<PersonalUniversidad> personalOpt = personalUniversidadRepository.findById(id);
+        return personalOpt.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @PostMapping("/buscar/byrfid")
+    public ResponseEntity<PersonalUniversidad> findByRfidNfc(@RequestBody RfidNfc rfidNfc) {
+        Optional<PersonalUniversidad> personalOpt = personalUniversidadRepository.findByRfidNfcIdCarnet(rfidNfc);
         return personalOpt.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 

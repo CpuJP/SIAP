@@ -29,6 +29,7 @@ public class SalaComputo implements Serializable {
     private PersonalUniversidad personalUniversidadNoDocumento;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = COLUMN_ID_NAME, nullable = false)
     public Integer getId() {
         return id;
