@@ -34,6 +34,11 @@ public class PersonalUniversidadController {
         return personalOpt.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    /**
+     * Validación existe al ingresar al campus
+     * Muestra información Básica de la persona
+     * Nombre completo
+     */
     @PostMapping("/buscar/byrfid")
     public ResponseEntity<PersonalUniversidad> findByRfidNfc(@RequestBody RfidNfc rfidNfc) {
         Optional<PersonalUniversidad> personalOpt = personalUniversidadRepository.findByRfidNfcIdCarnet(rfidNfc);

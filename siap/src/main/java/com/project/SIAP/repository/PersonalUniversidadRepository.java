@@ -12,4 +12,7 @@ public interface PersonalUniversidadRepository extends JpaRepository<PersonalUni
 
     @Transactional(readOnly = true)
     Optional<PersonalUniversidad> findByRfidNfcIdCarnet(RfidNfc rfidNfc);
+
+    @Transactional(readOnly = true)
+    Optional<PersonalUniversidad> findByCelular(String celular);
 }
