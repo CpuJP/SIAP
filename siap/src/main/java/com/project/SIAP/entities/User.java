@@ -4,6 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="app_users")
+//schema = "siapprueba",
 public class User {
 
     @Id

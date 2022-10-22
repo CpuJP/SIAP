@@ -5,9 +5,9 @@ import java.io.Serializable;
 import java.time.Instant;
 
 @Entity(name = Campus.ENTITY_NAME)
-//@Table(name = Campus.TABLE_NAME, schema = "siapprueba", indexes = {
-//        @Index(name = "fk_Campus_Personal_Universidad1_idx", columnList = "Personal_Universidad_No_Documento")
-//})
+@Table(name = Campus.TABLE_NAME, indexes = {
+        @Index(name = "fk_Campus_Personal_Universidad1_idx", columnList = "Personal_Universidad_No_Documento")
+})
 public class Campus implements Serializable {
     public static final String ENTITY_NAME = "Campus";
     public static final String TABLE_NAME = "campus";

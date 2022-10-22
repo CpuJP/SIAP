@@ -7,7 +7,7 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 @Entity(name = RfidNfc.ENTITY_NAME)
-//@Table(name = RfidNfc.TABLE_NAME, schema = "siapprueba")
+@Table(name = RfidNfc.TABLE_NAME)
 public class RfidNfc implements Serializable {
     public static final String ENTITY_NAME = "Rfid_Nfc";
     public static final String TABLE_NAME = "rfid_nfc";
