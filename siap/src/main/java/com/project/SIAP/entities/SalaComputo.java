@@ -4,11 +4,10 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.time.Instant;
 
-//schema = "siapprueba",
 @Entity(name = SalaComputo.ENTITY_NAME)
-@Table(name = SalaComputo.TABLE_NAME,  indexes = {
-        @Index(name = "fk_Sala Computo_Personal_Universidad1_idx", columnList = "Personal_Universidad_No_Documento")
-})
+//@Table(name = SalaComputo.TABLE_NAME, schema = "siapprueba", indexes = {
+//        @Index(name = "fk_Sala Computo_Personal_Universidad1_idx", columnList = "Personal_Universidad_No_Documento")
+//})
 public class SalaComputo implements Serializable {
     public static final String ENTITY_NAME = "Sala_Computo";
     public static final String TABLE_NAME = "`sala computo`";

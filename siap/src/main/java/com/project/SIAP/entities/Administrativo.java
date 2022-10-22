@@ -4,9 +4,9 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity(name = Administrativo.ENTITY_NAME)
-@Table(name = Administrativo.TABLE_NAME,  indexes = {
-        @Index(name = "fk_Administrativo_Personal_Universidad1_idx", columnList = "Personal_Universidad_No_Documento")
-})
+//@Table(name = Administrativo.TABLE_NAME, schema = "siapprueba", indexes = {
+//        @Index(name = "fk_Administrativo_Personal_Universidad1_idx", columnList = "Personal_Universidad_No_Documento")
+//})
 public class Administrativo implements Serializable {
     public static final String ENTITY_NAME = "Administrativo";
     public static final String TABLE_NAME = "administrativo";
