@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity(name = Estudiante.ENTITY_NAME)
-@Table(name = Estudiante.TABLE_NAME, schema = "siapprueba", indexes = {
+@Table(name = Estudiante.TABLE_NAME,  indexes = {
         @Index(name = "fk_Estudiantes_Personal_Universidad1_idx", columnList = "Personal_Universidad_No_Documento")
 })
 public class Estudiante implements Serializable {

@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.time.Instant;
 
 @Entity(name = Laboratorio.ENTITY_NAME)
-@Table(name = Laboratorio.TABLE_NAME, schema = "siapprueba", indexes = {
+@Table(name = Laboratorio.TABLE_NAME,  indexes = {
         @Index(name = "fk_Laboratorio_Personal_Universidad1_idx", columnList = "Personal_Universidad_No_Documento")
 })
 public class Laboratorio implements Serializable {
