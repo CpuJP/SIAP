@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity(name = PersonalUniversidad.ENTITY_NAME)
-@Table(name = PersonalUniversidad.TABLE_NAME, schema = "siapprueba", indexes = {
+@Table(name = PersonalUniversidad.TABLE_NAME, indexes = {
         @Index(name = "Celular_UNIQUE", columnList = "Celular", unique = true),
         @Index(name = "fk_Personal_Universidad_RFID_NFC_idx", columnList = "RFID_NFC_Id_Carnet"),
         @Index(name = "Codigo_UNIQUE", columnList = "Codigo", unique = true),

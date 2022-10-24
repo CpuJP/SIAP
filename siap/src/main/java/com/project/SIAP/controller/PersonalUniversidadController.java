@@ -7,11 +7,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
 @RestController
+@PreAuthorize("hasAnyRole('ADMIN', 'BIENS', 'BIBLIO', 'SALC', 'LABT', 'CAMP')")
 @RequestMapping("/api/crud/personaluniversidad")
 public class PersonalUniversidadController {
 
@@ -90,6 +92,7 @@ public class PersonalUniversidadController {
         PersonalUniversidad resultado = personalUniversidadRepository.save(personalUniversidad);
         return ResponseEntity.ok(resultado);
     }
+
 
     @DeleteMapping("/eliminar/{id}")
     public ResponseEntity<PersonalUniversidad> delete(@PathVariable String id) {
