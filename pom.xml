@@ -10,9 +10,9 @@
 	</parent>
 	<groupId>com.project</groupId>
 	<artifactId>SIAP</artifactId>
-	<version>1.0 ALPHA</version>
+	<version>1.0</version>
 	<name>SIAP</name>
-	<description>Demo project for Spring Boot</description>
+	<description>spring-deploy</description>
 	<properties>
 		<java.version>17</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
