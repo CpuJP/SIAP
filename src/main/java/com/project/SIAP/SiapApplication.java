@@ -8,6 +8,6 @@ import org.springframework.context.ApplicationContext;
 @SpringBootApplication
 public class SiapApplication {
 	public static void main(String[] args) {
-		ApplicationContext context = SpringApplication.run(SiapApplication.class, args);
+		SpringApplication.run(SiapApplication.class, args);
 	}
 }
