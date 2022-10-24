@@ -1,4 +1,4 @@
-package com.project.SIAP.service.impl;
+package com.project.SIAP.reports.service.impl;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -8,13 +8,13 @@ import java.util.Map;
 
 import javax.sql.DataSource;
 
+import com.project.SIAP.reports.service.api.ReporteJasperServiceAPI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.project.SIAP.commons.JasperReportManager;
-import com.project.SIAP.enums.TipoReporteEnum;
-import com.project.SIAP.model.ReporteJasperDTO;
-import com.project.SIAP.service.api.ReporteJasperServiceAPI;
+import com.project.SIAP.reports.commons.JasperReportManager;
+import com.project.SIAP.reports.enums.TipoReporteEnum;
+import com.project.SIAP.reports.model.ReporteJasperDTO;
 
 import net.sf.jasperreports.engine.JRException;
 

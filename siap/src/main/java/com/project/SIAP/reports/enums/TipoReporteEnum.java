@@ -1,4 +1,4 @@
-package com.project.SIAP.enums;
+package com.project.SIAP.reports.enums;
 
 public enum TipoReporteEnum {
 	

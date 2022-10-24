@@ -1,4 +1,4 @@
-package com.project.SIAP.config;
+package com.project.SIAP.reports.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

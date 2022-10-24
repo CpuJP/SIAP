@@ -1,4 +1,4 @@
-package com.project.SIAP.controller;
+package com.project.SIAP.reports.controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.project.SIAP.enums.TipoReporteEnum;
-import com.project.SIAP.model.ReporteJasperDTO;
-import com.project.SIAP.service.api.ReporteJasperServiceAPI;
+import com.project.SIAP.reports.enums.TipoReporteEnum;
+import com.project.SIAP.reports.model.ReporteJasperDTO;
+import com.project.SIAP.reports.service.api.ReporteJasperServiceAPI;
 
 import net.sf.jasperreports.engine.JRException;
 

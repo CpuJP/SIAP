@@ -1,4 +1,4 @@
-package com.project.SIAP.commons;
+package com.project.SIAP.reports.commons;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -10,7 +10,7 @@ import java.util.Map;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
-import com.project.SIAP.enums.TipoReporteEnum;
+import com.project.SIAP.reports.enums.TipoReporteEnum;
 
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperExportManager;

@@ -1,4 +1,4 @@
-package com.project.SIAP.model;
+package com.project.SIAP.reports.model;
 
 import java.io.ByteArrayInputStream;
 

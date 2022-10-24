@@ -1,10 +1,10 @@
-package com.project.SIAP.service.api;
+package com.project.SIAP.reports.service.api;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Map;
 
-import com.project.SIAP.model.ReporteJasperDTO;
+import com.project.SIAP.reports.model.ReporteJasperDTO;
 
 import net.sf.jasperreports.engine.JRException;
 
