@@ -1,9 +1,8 @@
-package com.project.SIAP.security.payload;
+package com.project.SIAP.security.dto;
 
-public class RegisterRequest {
+public class LoginUser {
 
     private String username;
-    private String email;
     private String password;
 
     public String getUsername() {
@@ -12,14 +11,6 @@ public class RegisterRequest {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getPassword() {

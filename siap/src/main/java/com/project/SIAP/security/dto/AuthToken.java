@@ -1,13 +1,14 @@
-package com.project.SIAP.security.payload;
+package com.project.SIAP.security.dto;
 
-public class JwtResponse {
+public class AuthToken {
 
     private String token;
 
-    public JwtResponse() {
+    public AuthToken(){
+
     }
 
-    public JwtResponse(String token) {
+    public AuthToken(String token){
         this.token = token;
     }
 
@@ -20,4 +21,3 @@ public class JwtResponse {
     }
 
 }
-
