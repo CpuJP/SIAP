@@ -13,6 +13,7 @@ import javax.print.Doc;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 @PreAuthorize("hasRole('ADMIN')")
 @RequestMapping("/api/crud/docente")
 public class DocenteController {

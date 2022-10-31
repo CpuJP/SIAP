@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 @PreAuthorize("hasAnyRole('ADMIN', 'LABT')")
 @RequestMapping("/api/crud/laboratorio")
 public class LaboratorioController {

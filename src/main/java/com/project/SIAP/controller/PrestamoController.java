@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 @PreAuthorize("hasAnyRole('ADMIN', 'BIENS', 'BIBLIO', 'SALC', 'LABT')")
 @RequestMapping("/api/crud/prestamos")
 public class PrestamoController {
