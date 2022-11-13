@@ -4,6 +4,7 @@ import com.project.SIAP.security.dto.UserDto;
 import com.project.SIAP.security.entities.Role;
 import com.project.SIAP.security.entities.User;
 import com.project.SIAP.security.exception.EmailAlreadyExistsException;
+import com.project.SIAP.security.exception.UsernameAlreadyExistsException;
 import com.project.SIAP.security.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -65,6 +66,9 @@ public class UserServiceImpl implements UserDetailsService, UserService {
 
         if(userRepository.existsByEmail(nUser.getEmail()))
             throw new EmailAlreadyExistsException("Email ocupado");
+
+        if(userRepository.existsByUsername(nUser.getUsername()))
+            throw new UsernameAlreadyExistsException("UserName ocupado");
 
         nUser.setPassword(bcryptEncoder.encode(user.getPassword()));
 
