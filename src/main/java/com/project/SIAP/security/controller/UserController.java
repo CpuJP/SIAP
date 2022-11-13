@@ -5,7 +5,9 @@ import com.project.SIAP.security.dto.AuthToken;
 import com.project.SIAP.security.dto.LoginUser;
 import com.project.SIAP.security.dto.UserDto;
 import com.project.SIAP.security.entities.User;
+import com.project.SIAP.security.repository.UserRepository;
 import com.project.SIAP.security.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -13,6 +15,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
@@ -23,6 +26,9 @@ public class UserController {
     private AuthenticationManager authenticationManager;
     private TokenProvider jwtTokenUtil;
     private UserService userService;
+
+    @Autowired
+    private UserRepository userRepository;
 
     public UserController(AuthenticationManager authenticationManager, TokenProvider jwtTokenUtil, UserService userService) {
         this.authenticationManager = authenticationManager;
@@ -47,6 +53,12 @@ public class UserController {
     // @RequestMapping(value="/register", method = RequestMethod.POST)
     @PostMapping("/register")
     public User saveUser(@RequestBody UserDto user){
+        if (userRepository.existsByEmail(user.getEmail())){
+            throw new UsernameNotFoundException("Este correo ya está en uso");
+        }
+        if (userRepository.existsByUsername(user.getUsername())){
+            throw new UsernameNotFoundException("Nombre de usuario ya está en uso");
+        }
         // prueba a lanzar excepción customizada
         // throw new EmailAlreadyExistsException("Email ocupado");
         return userService.save(user);
