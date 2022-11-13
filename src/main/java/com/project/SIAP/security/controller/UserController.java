@@ -53,12 +53,6 @@ public class UserController {
     // @RequestMapping(value="/register", method = RequestMethod.POST)
     @PostMapping("/register")
     public User saveUser(@RequestBody UserDto user){
-        if (userRepository.existsByEmail(user.getEmail())){
-            throw new UsernameNotFoundException("Este correo ya está en uso");
-        }
-        if (userRepository.existsByUsername(user.getUsername())){
-            throw new UsernameNotFoundException("Nombre de usuario ya está en uso");
-        }
         // prueba a lanzar excepción customizada
         // throw new EmailAlreadyExistsException("Email ocupado");
         return userService.save(user);
