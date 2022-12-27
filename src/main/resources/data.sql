@@ -1,3 +1,5 @@
+
+
 INSERT INTO role (description, name) VALUES ('Administrador', 'ADMIN');
 INSERT INTO role (description, name) VALUES ('Usuario', 'USER');
 INSERT INTO role (description, name) VALUES ('Bienestar', 'BIENS');
